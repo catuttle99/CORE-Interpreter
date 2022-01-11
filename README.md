@@ -9,7 +9,10 @@
 # CORE Language
   This program is an Interpreter for the fictional CORE language. The Grammar for the language follows:
   
-  < prog >::= program << decl seq >> begin << stmt seq >> end 
+  < prog >::= program < decl seq > begin < stmt seq > end 
+  < decl seq >::= < decl > | < decl > < decl seq >
+  
+  
   
 # Design Pattern
   This Interpreter uses the Object Oriented approach, where each Non-Terminal in the grammar is it's own class, that has a parser, executor, and printer method.

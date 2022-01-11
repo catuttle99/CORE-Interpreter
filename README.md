@@ -10,7 +10,18 @@
   This program is an Interpreter for the fictional CORE language. The Grammar for the language follows:
   
   < prog >::= program < decl seq > begin < stmt seq > end 
+  
   < decl seq >::= < decl > | < decl > < decl seq >
+  
+  < stmt seq >::= < stmt > | < stmt > < stmt seq >
+  
+  < decl >::= int < id list >;
+  
+  < id list >::= < id > | < id > , < id list >
+  
+  < stmt >::= < assign > | < if > | < loop > | < in > | < out >
+  
+  < assign >::= < id > = < exp >;
   
   
   
